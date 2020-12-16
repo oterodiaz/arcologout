@@ -31,4 +31,5 @@ Or, if you also want the default config
 `./install_config.sh`
 
 Note: This requires root privileges and will install to `/usr/lib/arcologout`, `/usr/local/bin/arcologout`, `/usr/share/arcologout`.
+
 Note: The default config installs to /etc/arcologout.conf.
