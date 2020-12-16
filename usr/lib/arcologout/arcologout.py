@@ -23,8 +23,7 @@ class TransparentWindow(Gtk.Window):
     cmd_restart = "systemctl reboot"
     cmd_suspend = "systemctl suspend"
     cmd_hibernate = "systemctl hibernate"
-    cmd_lock = 'betterlockscreen -l dimblur -- --timestr="%H:%M"'
-    wallpaper = "/usr/share/arcologout/wallpaper.jpg"
+    cmd_lock = 'slock'
     d_buttons = ['cancel',
                  'shutdown',
                  'restart',
@@ -308,21 +307,9 @@ class TransparentWindow(Gtk.Window):
             Gtk.main_quit()
 
         elif (data == self.binds.get('lock')):
-            if not fn.os.path.isdir(fn.home + "/.cache/i3lock"):
-                if fn.os.path.isfile(self.wallpaper):
-                    self.lbl_stat.set_markup("<span size=\"x-large\"><b>Caching lockscreen images for a faster locking next time</b></span>")  # noqa
-                    t = threading.Thread(target=fn.cache_bl,
-                                         args=(self, GLib, Gtk,))
-                    t.daemon = True
-                    t.start()
-                else:
-                    self.lbl_stat.set_markup("<span size=\"x-large\"><b>You need to set the wallpaper path in arcologout.conf</b></span>")  # noqa
-                    self.Ec.set_sensitive(True)
-                    self.active = False
-            else:
-                fn.os.unlink("/tmp/arcologout.lock")
-                self.__exec_cmd(self.cmd_lock)
-                Gtk.main_quit()
+            fn.os.unlink("/tmp/arcologout.lock")
+            self.__exec_cmd(self.cmd_lock)
+            Gtk.main_quit()
         elif (data == self.binds.get('settings')):
             self.themes.grab_focus()
             self.popover.set_relative_to(self.Eset)
@@ -345,7 +332,7 @@ class TransparentWindow(Gtk.Window):
 
     def on_close(self, widget, data):
         fn.os.unlink("/tmp/arcologout.lock")
-        fn.os.unlink("/tmp/arcologout.pid")            
+        fn.os.unlink("/tmp/arcologout.pid")
         Gtk.main_quit()
 
     def message_box(self, message, title):
