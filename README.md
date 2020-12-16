@@ -26,4 +26,8 @@ Run the install script
 
 `./install.sh`
 
+Or, if you also want the default config
+
+`./install_config.sh`
+
 Note: This requires root privileges and will install to `/usr/lib/arcologout`, `/usr/local/bin/arcologout`, `/usr/share/arcologout`.
