@@ -2,12 +2,15 @@
 A logout screen originally written for the Arco Linux distribution that blurs the screen and lets you power off, reboot, log out, etc.
 
 # Changes
-I've disabled suspend, as I don't use it, and changed some commands for it to work in non-systemd systems (in the no-systemd branch).
+I've made the lock button just run a command (slock) and changed the power commands for non-systemd systems (in the no-systemd branch).
+Note: The lock command can be set in ~/.config/arcologout/arcologout.conf (see my dotfiles).
+
 As you can see, this is more like a personal config uploaded to Gitlab rather than a proper fork, as no substantial changes have been made.
 
-I've also written a quick `install.sh` script to automate installation
+I've also written a quick `install.sh` script to automate installation.
 
 # Installation
+You'll need to have Wnck and the GTK python libraries installed.
 
 ### Clone this repository
 `git clone https://gitlab.com/oterodiaz/arcologout`
