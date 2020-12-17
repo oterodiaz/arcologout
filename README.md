@@ -1,6 +1,8 @@
 # Arcolinux Logout
 A logout screen originally written for the Arco Linux distribution that blurs the screen and lets you power off, reboot, log out, etc.
 
+You can learn more about Arco Linux [here](https://www.arcolinux.com/).
+
 # Changes
 I've made the lock button just run a command (slock) and changed the power commands for non-systemd systems (in the no-systemd branch).
 Note: The lock command can be set in ~/.config/arcologout/arcologout.conf (see my dotfiles).
