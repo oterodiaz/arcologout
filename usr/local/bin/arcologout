@@ -1,3 +1,16 @@
 #!/usr/bin/env sh
 
-python3 /usr/lib/arcologout/arcologout.py
+platform='unknown'
+unamestr=$(uname)
+if [ "$unamestr" == 'Linux' ]; then
+    platform='linux'
+elif [ "$unamestr" == 'FreeBSD' ]; then
+    platform='freebsd'
+fi
+
+if [ $platform == 'linux' ]; then
+    python3 /usr/lib/arcologout/arcologout.py
+elif [ $platform == 'freebsd' ]; then
+    python3 /usr/local/lib/arcologout/arcologout.py
+fi
+
