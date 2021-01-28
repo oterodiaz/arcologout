@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 cp -r ./usr/* /usr/
 cp ./etc/arcologout.conf /etc/arcologout.conf
