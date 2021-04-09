@@ -20,7 +20,7 @@ from gi.repository import Gtk, GdkPixbuf, Gdk, Wnck, GLib, GdkX11  # noqa
 
 
 class TransparentWindow(Gtk.Window):
-    cmd_shutdown = "sudo shutdown -P now" if sys.platform == "linux" else "sudo shutdown -p now"
+    cmd_shutdown = "sudo shutdown -hP now" if sys.platform == "linux" else "sudo shutdown -p now"
     cmd_restart = "sudo shutdown -r now"
     cmd_suspend = "systemctl suspend"
     cmd_hibernate = "systemctl hibernate"
