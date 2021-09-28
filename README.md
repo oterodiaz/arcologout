@@ -14,6 +14,8 @@ I've also written a quick `install.sh` script to automate installation.
 # Installation
 You'll need to have Wnck and the GTK python libraries installed.
 
+`sudo pacman -S cairo python-cairo libwnck3 python-gobject`
+
 ### Clone this repository
 `git clone https://gitlab.com/oterodiaz/arcologout`
 
