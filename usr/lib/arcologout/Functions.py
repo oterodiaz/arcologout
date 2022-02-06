@@ -130,7 +130,7 @@ def _get_logout():
         return "pkill awesome"
     elif desktop in ("qtile", "/usr/share/xsessions/qtile"):
         return "pkill qtile"
-    elif desktop in ("xmonad", "/usr/share/xsessions/xmonad"):
+    elif desktop in ("xmonad", "/usr/share/xsessions/xmonad", "xmonad-automatic-theme"):
         return "pkill xmonad"
     elif desktop in ("dwm", "/usr/share/xsessions/dwm", "dwm-automatic-theme"):
         return "pkill dwm"
