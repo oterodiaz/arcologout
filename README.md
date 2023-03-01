@@ -1,4 +1,4 @@
-# Arcolinux Logout
+# Arco Linux Logout
 A logout screen originally written for the Arco Linux distribution that blurs the screen and lets you power off, reboot, log out, etc.
 
 You can learn more about Arco Linux [here](https://www.arcolinux.com/).
