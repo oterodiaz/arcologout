@@ -17,7 +17,7 @@ You'll need to have Wnck and the GTK python libraries installed.
 `sudo pacman -S cairo python-cairo libwnck3 python-gobject`
 
 ### Clone this repository
-`git clone https://gitlab.com/oterodiaz/arcologout`
+`git clone https://github.com/oterodiaz/arcologout`
 
 ### Go into the folder
 `cd arcologout`
